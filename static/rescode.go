@@ -15,6 +15,31 @@ func (s *BaseReply) Failed(resCode, resDesc string) {
 	s.ResDesc = resDesc
 }
 
+type StringReply struct {
+	BaseReply
+	Data string `json:"data"`
+}
+
+type IntReply struct {
+	BaseReply
+	Data int32 `json:"data"`
+}
+
+type Int64Reply struct {
+	BaseReply
+	Data int64 `json:"data"`
+}
+
+type Uint32Reply struct {
+	BaseReply
+	Data uint32 `json:"data"`
+}
+
+type UintReply struct {
+	BaseReply
+	Data uint `json:"data"`
+}
+
 const (
 	SUCCESS   string = "SUCCESS"      //成功
 	FAILED    string = "FAILED"       //失败
