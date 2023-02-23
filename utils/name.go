@@ -2,7 +2,9 @@ package utils
 
 import (
 	// "github.com/goombaio/namegenerator"
+	"fmt"
 	"time"
+
 	// "strings"
 	"math/rand"
 )
@@ -19,8 +21,7 @@ func GetRandomName() (name string, email string) {
 	tailName := getTailName()
 	emailEnd := getEmailEnd()
 	name = headName + " " + tailName
-
-	email = headName + emailEnd
+	email = fmt.Sprintf("%v%v%v", headName, GetRandomNum(3), emailEnd)
 	return name, email
 }
 
