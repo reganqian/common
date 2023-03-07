@@ -40,6 +40,11 @@ type UintReply struct {
 	Data uint `json:"data"`
 }
 
+type StringsReply struct {
+	BaseReply
+	DataList []string `json:"dataList"`
+}
+
 const (
 	SUCCESS   string = "SUCCESS"      //成功
 	FAILED    string = "FAILED"       //失败
